@@ -1,10 +1,5 @@
-from src.bingo import carton
-
+from src.bingo import t_1_a_90
+from src.bingo import carton1
 
 def test_1_a_90():
-	mi_carton=carton()
-	for fila in range(0,3):
-		for columna in range(0,9):
-			celda= mi_carton[fila][columna]
-			assert celda>=0 and celda <=90
-
+    assert t_1_a_90(carton1())

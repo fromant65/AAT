@@ -1,10 +1,5 @@
-from src.bingo import carton
+from src.bingo import t_filas
+from src.bingo import carton2
 
 def test_filas():
-	mi_carton=carton()
-	contador=0
-	for fila in mi_carton:
-		for celda in fila:
-			contador+=celda
-		assert contador>0
-		contador=0
+	assert t_filas(carton2()) == True
