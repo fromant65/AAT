@@ -111,7 +111,7 @@ def t_3por9(carton): #Verifica que el carton sea una matriz de 3*9
     return bandera
 
 def t_columnas_vacias(carton): #Verifica que no haya columnas vacias
-    aux=(0,0,0,0,0,0,0,0,0)
+    aux=[0,0,0,0,0,0,0,0,0]
     for fila in range(3):
         for celda in range (9):
             aux[celda]+=carton[fila][celda]
@@ -129,7 +129,7 @@ def t_columnas_3ocupadas(carton): #Verifica que las 3 celdas de cada columna no 
     return bandera
 
 def t_3columnas_1ocupada(carton): #Verifica que solo haya 3 columnas con una sola casilla ocupada
-    aux=(0,0,0,0,0,0,0,0,0)
+    aux=[0,0,0,0,0,0,0,0,0]
     contador=0
     bandera=False
     for celda in range(9):
@@ -173,7 +173,7 @@ def intentoCarton():
     numerosCarton = 0
 
     while numerosCarton < 15:
-        contador++
+        contador+=1
         if (contador == 50):
             return intentoCarton()
 
