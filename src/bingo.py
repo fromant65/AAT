@@ -87,9 +87,9 @@ def t_num_repetidos(carton): #Verifica que no haya numeros repetidos en el carto
 def t_5_por_fila(carton): #Verifica que haya 5 casillas ocupadas x fila
     contador = 0;
     bandera = True
-    for fila in carton
+    for fila in carton:
         contador=0
-        for celda in fila
+        for celda in fila:
             if celda!=0:
                 contador+=1
         if contador!=5:
