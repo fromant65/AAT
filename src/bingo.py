@@ -1,3 +1,5 @@
+import random
+
 def carton1():
 	carton = (
 		(1,10,22,0,0,54,0,72,0),
@@ -155,42 +157,41 @@ def t_2ocupadas_seguidas(carton): #Verifica que no haya mas de 3 celdas consecut
                 bandera= False
     return bandera
 
-def intentoCarton() {
-    contador = 0;
+def intentoCarton():
+    contador = 0
     carton = [
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0],
-      [0,0,0]
-    ];
-    numerosCarton = 0;
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0],
+        [0,0,0]
+    ]
+    numerosCarton = 0
 
     while numerosCarton < 15:
         contador++
         if (contador == 50):
             return intentoCarton()
 
-        numero = rand (1, 90);
+        numero = randint (1, 90)
 
-        columna = floor (numero / 10);
+        columna = numero // 10
         if (columna == 9):
             columna = 8
-        huecos = 0;
+        huecos = 0
         for i in range(3):
             if carton[columna][i] == 0:
                 huecos+=1
             if carton[columna][i] == numero:
-            huecos = 0;
-            break
+                huecos = 0
+                break
         if huecos < 2:
             continue
-
-        fila = 0;
+        fila = 0
         for j in range(3):
             huecos = 0
             for i in range(9):
