@@ -104,7 +104,7 @@ def t_3por9(carton): #Verifica que el carton sea una matriz de 3*9
         c1+=1
         for celda in fila:
             c2+=1
-    if (c1==3 && c2==27):
+    if c1==3 and c2==27:
         bandera=True
     return bandera
 
