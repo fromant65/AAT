@@ -242,4 +242,4 @@ def elegirCarton():
             break
     return carton
 
-print (elegirCarton())
+#print (elegirCarton())
