@@ -18,29 +18,28 @@ def carton2():
 
 def t_1_a_90(carton):
 	aux = True
-	for fila in range(0,3):
-		for columna in range(0,9):
-			celda= carton[fila][columna]
+	for fila in carton:
+		for celda in fila:
 			aux = aux and (0 <= celda <= 90)
 	return aux
 
 def t_contar_celdas_ocupadas(carton):
 	contador=0
-	for fila in range(0,3):
-		for columna in range(0,9):
-			celda=carton[fila][columna]
+	for fila in carton:
+		for celda in fila:
 			if celda==0:
 				contador+=1
-	return contador
+	return (contador==12)
 
 def t_columnas_ocupadas(carton):
-	contador=(0,0,0,0,0,0,0,0,0)
-	for fila in carton:
-		contador=[x + y for x, y in zip(contador, fila)]
-	hay_una_vacia=0
+	contador=[0,0,0,0,0,0,0,0,0]
+	for fila in range(3):
+		for celda in range(9):
+		    contador[celda] = carton[fila][celda]
+	hay_una_vacia=False
 	for celda in contador:
 		if(celda==0):
-			hay_una_vacia=1
+			hay_una_vacia=True
 	return hay_una_vacia
 
 def t_columnas_descendentes(carton):
@@ -177,7 +176,7 @@ def intentoCarton():
         if (contador == 50):
             return intentoCarton()
 
-        numero = randint (1, 90)
+        numero = random.randint (1, 90)
 
         columna = numero // 10
         if (columna == 9):
@@ -216,3 +215,31 @@ def intentoCarton():
         if huecos == 3:
             return intentoCarton()
     return carton
+
+def intentoATests(): #Pasa un carton de intentoCarton() a uno para hacer tests
+    carton=intentoCarton()
+    carton2=[
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]
+    ]
+    for i in range(9):
+        for j in range (3):
+            carton2[j][i]=carton[i][j]
+    return carton2
+
+#for i in range(50):
+#    print (intentoATests())
+
+def elegirCarton():
+    i=0
+    while True:
+        carton=intentoATests()
+        i+=1
+        #print(t_columnas_descendentes(carton))
+        if t_3por9(carton) and t_1_a_90(carton) and t_contar_celdas_ocupadas(carton) and t_columnas_ocupadas(carton) and t_columnas_descendentes(carton) and t_filas(carton) and t_incremento_horizontal(carton) and t_num_repetidos(carton) and t_5_por_fila(carton) and t_columnas_vacias(carton) and t_columnas_3ocupadas(carton) and t_3columnas_1ocupada(carton) and t_2vacias_seguidas(carton) and t_2ocupadas_seguidas(carton):
+            print(i)
+            break
+    return carton
+
+print (elegirCarton())
