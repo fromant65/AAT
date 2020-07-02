@@ -1,6 +1,7 @@
 # Generador de cartones de bingo
 
 [![Build Status](https://travis-ci.com/fromant65/AAT.svg?branch=master)](https://travis-ci.com/fromant65/AAT)
+[![Coverage Status](https://coveralls.io/repos/github/fromant65/AAT/badge.svg?branch=master)](https://coveralls.io/github/fromant65/AAT?branch=master)
 
 Este proyecto tiene la intención de, utilizando Python como lenguaje de programación, dar distintas funciones que tengan la capacidad de generar un cartón de Bingo tradicional. El proyecto es llevado a cabo para la asignatura de Adaptacion al Ambiente de trabajo (AAT) de la especialidad Informatica, en el Instituto Politécnico Superior Gral San Martin, Rosario, Santa Fe, Argentina.
 
