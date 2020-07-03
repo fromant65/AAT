@@ -238,8 +238,8 @@ def elegirCarton():
         i+=1
         #print(t_columnas_descendentes(carton))
         if t_3por9(carton) and t_1_a_90(carton) and t_contar_celdas_ocupadas(carton) and t_columnas_ocupadas(carton) and t_columnas_descendentes(carton) and t_filas(carton) and t_incremento_horizontal(carton) and t_num_repetidos(carton) and t_5_por_fila(carton) and t_columnas_vacias(carton) and t_columnas_3ocupadas(carton) and t_3columnas_1ocupada(carton) and t_2vacias_seguidas(carton) and t_2ocupadas_seguidas(carton):
-            print(i)
+            #print(i)
             break
     return carton
 
-print (elegirCarton())
+#print (elegirCarton())
