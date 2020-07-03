@@ -23,6 +23,6 @@ def t_mostrar_carton():
     else:
         return False
 
-print(t_mostrar_carton())
+#print(t_mostrar_carton())
 print(mostrar_carton())
 
