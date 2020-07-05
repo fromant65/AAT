@@ -45,8 +45,13 @@ Tests que validan el funcionamiento del src.
 
 ## Ejecución
 
-Para ejecutar el programa, en una terminal deberemos ejecutar el siguiente comando:
+### Consola
+Para ejecutar el programa por consola, en una terminal deberemos ejecutar el siguiente comando:
 <pre><code>python bingo.py</pre></code>
+### WEB
+Para ver un carton generado, podremos generar un archivo .html con el siguiente comando:
+<pre><code>python bingo_web.py</pre></code>
+Se nos generará un archivo bingo.html en la carpeta del proyecto. Luego abrimos el archivo en nuestro navegador preferido y así podremos visualizar el cartón generado.
 
 ## Comentarios 
 Agradecimientos a Mariano D'Agostino, profesor encargado de la asignatura.
